@@ -1,6 +1,6 @@
 # Guía de configuración local de SonarQube
 
-Este directorio contiene todo lo necesario para **levantar SonarQube en local** con Docker y analizar proyectos **paddemy-backend** con Maven.
+Este directorio contiene todo lo necesario para **levantar SonarQube en local** con Docker y analizar **paddemy-backend**.
 
 ---
 
@@ -16,7 +16,7 @@ sonar-config/
 
 ---
 
-## 🧰 0️⃣ Prerrequisitos
+## 0️⃣ Prerrequisitos
 
 Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas en tu entorno local:
 
@@ -82,7 +82,7 @@ python3 init_sonar.py
 
 > ⚠️ Asegúrate de que SonarQube ya está completamente levantado antes de ejecutar el script.
 
-¿Qué ha hecho el script?:
+El script `init_sonar.py` realiza automáticamente los siguientes pasos de configuración inicial:
 
 - Cambia la contraseña por defecto de `admin` → `$4adminP@ssw0rd` (si aún no estaba cambiada)  
 - Crea un token de acceso para Maven  
@@ -106,7 +106,7 @@ mvn clean verify sonar:sonar \
   -Dsonar.projectKey=paddemy_backend_key
 ```
 
-Ejecuta ese comando desde la raíz del proyecto que quieres analizar.
+Ejecuta ese comando desde la raíz del paddemy-backend.
 
 ---
 
