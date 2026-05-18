@@ -99,9 +99,11 @@ El script `init_sonar.py` realiza automáticamente los siguientes pasos de confi
 
 Cuando el script termine, mostrará un comando similar a este:
 
+IMPORTANTE!: cambiar el valor de sonar.token por el que sale por consola al ejecutar el script para configurar y levantar Sonar.
+
 ```bash
 mvn clean verify sonar:sonar \
-  -Dsonar.token=squ_d50a753a8c44c633ded5fc0711929a52f3e4b3df \
+  -Dsonar.token=squ_7a69fe640058100df36ea3bb00671667527d604c \
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.projectKey=paddemy_backend_key
 ```
